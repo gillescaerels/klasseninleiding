@@ -93,5 +93,19 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Garage.Lib\Garage.Lib.csproj">
+      <Project>{e4b25314-1217-40a4-97fe-3dff98892dbd}</Project>
+      <Name>Garage.Lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LogGuard.Lib\LogGuard.Lib.csproj">
+      <Project>{d6384e77-4809-4155-b68a-5141bc255bec}</Project>
+      <Name>LogGuard.Lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mailer.Lib\Mailer.Lib.csproj">
+      <Project>{b191eb5d-a6a0-4db9-bb02-b0fed85d8725}</Project>
+      <Name>Mailer.Lib</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

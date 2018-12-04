@@ -5,8 +5,87 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:KlassenInleiding.Wpf"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="329.907" Width="1894.186" Loaded="Window_Loaded" >
     <Grid>
-        
+        <Grid x:Name="grdBasis" Margin="0" VerticalAlignment="Center" Background="#FFFBFBB0" HorizontalAlignment="Left" Width="1881">
+            <Grid x:Name="grdAuto" HorizontalAlignment="Left" Height="281" Width="389" VerticalAlignment="Top" Margin="0,10,0,0">
+                <ListBox x:Name="lstAuto" HorizontalAlignment="Left" Height="204" Margin="10,35,0,0" VerticalAlignment="Top" Width="140" Grid.RowSpan="2"/>
+                <Label Content="Auto's in garage" HorizontalAlignment="Left" Margin="11,4,0,0" VerticalAlignment="Top" Width="99"/>
+                <StackPanel HorizontalAlignment="Left" Height="156" Margin="163,35,0,0" VerticalAlignment="Top" Width="124">
+                    <Label Content="Id" Margin="0,0,0,3"/>
+                    <Label Content="Nummerplaat" Margin="0,0,0,3"/>
+                    <Label Content="Snelheid" Margin="0,0,0,3"/>
+                    <Label Content="Aankoopdatum" Margin="0,0,0,3"/>
+                    <Label Content="Kleur" Margin="0,0,0,3"/>
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Left" Height="156" Margin="303,35,0,0" VerticalAlignment="Top" Width="75">
+                    <Label x:Name="lblId" Content="0" Margin="0,0,0,5"/>
+                    <TextBox x:Name="txtNummerPlaat" Height="23" TextWrapping="Wrap" Margin="0,0,0,5"/>
+                    <TextBox x:Name="txtSnelheid" Height="23" TextWrapping="Wrap" Margin="0,0,0,5"/>
+                    <TextBox x:Name="txtAankoopDatum" Height="23" TextWrapping="Wrap" Margin="0,0,0,5"/>
+                    <Label x:Name="lblKleur" Content="0" Margin="0,0,0,5"/>
+
+                </StackPanel>
+                <Button x:Name="btnLog" Content="Log" HorizontalAlignment="Left" Margin="11,244,0,0" VerticalAlignment="Top" Width="75"/>
+                <WrapPanel HorizontalAlignment="Left" Height="38" Margin="168,196,0,0" VerticalAlignment="Top" Width="210">
+                    <Button x:Name="btnAdd" Content="Nieuw" Width="70"/>
+                    <Button x:Name="btnSave" Content="Opslaan" Width="70"/>
+                    <Button x:Name="btnDelete" Content="Verwijder" Width="70"/>
+                </WrapPanel>
+            </Grid>
+            <Grid x:Name="grdLog" HorizontalAlignment="Left" Height="281" Margin="394,10,-170,0" VerticalAlignment="Top" Width="559">
+                <ListBox x:Name="lsLog" HorizontalAlignment="Left" Height="204" Margin="10,35,0,0" VerticalAlignment="Top" Width="140"/>
+                <Label Content="Log items" HorizontalAlignment="Left" Margin="11,4,0,0" VerticalAlignment="Top" Width="99"/>
+                <StackPanel HorizontalAlignment="Left" Height="156" Margin="163,35,0,0" VerticalAlignment="Top" Width="98">
+                    <Label Content="Id" Margin="0,0,0,3"/>
+                    <Label Content="Omschrijving" Margin="0,0,0,3"/>
+                    <Label Content="Aankoopdatum" Margin="0,0,0,3"/>
+                    <Label Content="Verzonden&#x9;" Margin="0,0,0,3"/>
+                    <Label Content="Aard" Margin="0,0,0,3"/>
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Left" Height="195" Margin="266,35,0,0" VerticalAlignment="Top" Width="283">
+                    <Label x:Name="lblLogId" Content="0" Margin="0,0,0,5"/>
+                    <TextBox x:Name="txtOmschrijving" Height="23" TextWrapping="Wrap" Margin="0,0,0,5"/>
+                    <TextBox x:Name="txtAankoopdatum" Height="23" TextWrapping="Wrap" Margin="0,0,0,10"/>
+                    <CheckBox x:Name="chkVerzonden" Margin="0,0,0,10" />
+                    <TextBox x:Name="txtAard" Height="23" TextWrapping="Wrap" Margin="0,0,0,5"/>
+
+                </StackPanel>
+                <Button x:Name="btnAuto" Content="Auto's" HorizontalAlignment="Left" Margin="11,244,0,0" VerticalAlignment="Top" Width="75"/>
+                <Button x:Name="btnMail" Content="Mails" HorizontalAlignment="Left" Margin="95,244,0,0" VerticalAlignment="Top" Width="75"/>
+                <WrapPanel HorizontalAlignment="Left" Height="38" Margin="168,196,0,0" VerticalAlignment="Top" Width="210">
+                    <Button x:Name="btnAddLog" Content="Nieuw" Width="70"/>
+                    <Button x:Name="btnSaveLog" Content="Opslaan" Width="70"/>
+                    <Button x:Name="btnDeleteLog" Content="Verwijder" Width="70"/>
+                </WrapPanel>
+            </Grid>
+            <Grid x:Name="grdMail" HorizontalAlignment="Left" Height="281" Margin="972,10,0,0" VerticalAlignment="Top" Width="899">
+                <ListBox x:Name="lstMail" HorizontalAlignment="Left" Height="204" Margin="10,35,0,0" VerticalAlignment="Top" Width="140" />
+                <Label Content="Mail" HorizontalAlignment="Left" Margin="11,4,0,0" VerticalAlignment="Top" Width="99"/>
+                <StackPanel HorizontalAlignment="Left" Height="156" Margin="163,35,0,0" VerticalAlignment="Top" Width="98">
+                    <Label Content="Id" Margin="0,0,0,3"/>
+                    <Label Content="Omschrijving" Margin="0,0,0,3"/>
+                    <Label Content="Bestemmeling" Margin="0,0,0,3"/>
+                    <Label Content="Paswoord&#x9;" Margin="0,0,0,3"/>
+                    <Label Content="Aard" Margin="0,0,0,3"/>
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Left" Height="195" Margin="266,35,0,0" VerticalAlignment="Top" Width="283">
+                    <Label x:Name="lblMailId" Content="0" Margin="0,0,0,5"/>
+                    <TextBox x:Name="txtSubject" Height="23" TextWrapping="Wrap" Margin="0,0,0,5"/>
+                    <TextBox x:Name="txtBestemmeling" Height="23" TextWrapping="Wrap" Margin="0,0,0,10"/>
+                    <PasswordBox Margin="0,0,0,10"/>
+                    <TextBox x:Name="txtAard1" Height="23" TextWrapping="Wrap" Margin="0,0,0,5"/>
+
+                </StackPanel>
+                <Button x:Name="btnAuto1" Content="Auto's" HorizontalAlignment="Left" Margin="11,244,0,0" VerticalAlignment="Top" Width="75"/>
+                <TextBox x:Name="txtMailBody" HorizontalAlignment="Left" Height="206" Margin="560,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="339"/>
+                <Label Content="Mail tekst" HorizontalAlignment="Left" Margin="560,17,0,0" VerticalAlignment="Top" Width="143"/>
+                <WrapPanel HorizontalAlignment="Left" Height="38" Margin="168,196,0,0" VerticalAlignment="Top" Width="210">
+                    <Button x:Name="btnAddMail" Content="Nieuw" Width="70"/>
+                    <Button x:Name="btnSaveMail" Content="Opslaan" Width="70"/>
+                    <Button x:Name="btnDeleteMail" Content="Verwijder" Width="70"/>
+                </WrapPanel>
+            </Grid>
+        </Grid>
     </Grid>
 </Window>
