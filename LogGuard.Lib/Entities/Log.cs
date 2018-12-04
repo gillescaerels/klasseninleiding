@@ -13,5 +13,18 @@ namespace LogGuard.Lib.Entities
         public DateTime AangemaaktOm { get; set; }
         public string Omschrijving { get; set; }
         public bool Verzonden { get; set; }
+
+        public Log()
+        {
+
+        }
+
+        public Log(long id, string aard, string omschrijving)
+        {
+            Id = id;
+            Aard = aard;
+            AangemaaktOm = DateTime.Now;
+            Omschrijving = omschrijving;
+        }
     }
 }

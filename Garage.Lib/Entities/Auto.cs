@@ -10,6 +10,8 @@ namespace Garage.Lib.Entities
 {
     public class Auto
     {
+        static Random random = new Random();
+
         public int Id { get; set; }
         public string NummerPlaat { get; set; }
         public int Snelheid { get; set; }
@@ -19,7 +21,7 @@ namespace Garage.Lib.Entities
 
         public Auto()
         {
-
+            KiesKleur();
         }
 
         public Auto(int id, string taksPlaat, Brush kleur, int snelheid = 90)
@@ -29,6 +31,28 @@ namespace Garage.Lib.Entities
             Kleur = kleur;
             Snelheid = snelheid;
             AankoopDatum = DateTime.Today;
+        }
+
+        void KiesKleur()
+        {
+            int kleurNr;
+            Brush kleur;
+            kleurNr = random.Next(1, 5);
+            switch (kleurNr)
+            {
+                case 1: kleur = Brushes.White;
+                    break;
+                case 2:
+                    kleur = Brushes.Black;
+                    break;
+                case 3:
+                    kleur = Brushes.Red;
+                    break;
+                default:
+                    kleur = Brushes.Yellow;
+                    break;
+            }
+            Kleur = kleur;
         }
 
     }

@@ -30,6 +30,7 @@ namespace KlassenInleiding.Wpf
             MaakAutos();
             MaakLogs();
             MaakMails();
+            //lstAuto.Items.Add(txtAankoopDatum);
         }
 
         void StartSituatieGrid(Grid grid)
@@ -72,7 +73,12 @@ namespace KlassenInleiding.Wpf
 
             Auto auto3 = new Auto(3, "1-TAX-235", Brushes.Yellow, 100);
 
-            Auto auto3 = new Auto(3, "1-TAX-235", Brushes.DeepPink);
+            Auto auto4 = new Auto(4, "1-TAX-235", Brushes.DeepPink);
+
+            lstAuto.Items.Add(auto1);
+            lstAuto.Items.Add(auto2);
+            lstAuto.Items.Add(auto3);
+            lstAuto.Items.Add(auto4);
         }
 
         void MaakLogs()
@@ -96,6 +102,8 @@ namespace KlassenInleiding.Wpf
 
             Console.WriteLine($"{log2.AangemaaktOm.ToShortDateString()}" +
                               $"{log2.AangemaaktOm.ToShortDateString()} - {log2.Aard}\t{log2.Omschrijving}");
+
+            Log log3 = new Log(3, "Error", "Defect aan machine");
         }
 
         void MaakMails()
@@ -105,7 +113,7 @@ namespace KlassenInleiding.Wpf
             mail1.Afzender = "ict@spermalie.be";
             mail1.Bestemmeling = "stefaan.vercaemer@howest.be";
             mail1.Cc = "";
-            mail1.Bccc = "";
+            mail1.Bcc = "";
             mail1.Onderwerp = "Test";
             mail1.HtmlBody = "Test";
             mail1.GebruikersNaam = "ict@spermalie.be";
@@ -120,7 +128,7 @@ namespace KlassenInleiding.Wpf
                 Afzender = "ict@spermalie.be",
                 Bestemmeling = "stefaan.vercaemer@howest.be",
                 Cc = "",
-                Bccc = "",
+                Bcc = "",
                 Onderwerp = "Test",
                 HtmlBody = "Test",
                 GebruikersNaam = "ict@spermalie.be",
